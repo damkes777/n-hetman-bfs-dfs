@@ -18,11 +18,11 @@ class PlotHelper:
 
 
     @staticmethod
-    def draw_compare_plot(a_data, b_data, title, x_label, y_label, path):
+    def draw_compare_plot(a_data, b_data, title, x_label, y_label, path, a_label, b_label):
         plt.close('all')
 
-        plt.plot(a_data, label='Normal')
-        plt.plot(b_data, label='Intelligent')
+        plt.plot(a_data, label=a_label)
+        plt.plot(b_data, label=b_label)
 
         plt.title(title)
         plt.xlabel(x_label)

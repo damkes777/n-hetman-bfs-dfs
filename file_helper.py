@@ -23,3 +23,21 @@ class FileHelper:
             for hetman_quantity, solutions in datas.items():
                 for solution in solutions:
                     writer.writerow([hetman_quantity, solution])
+
+    @staticmethod
+    def get_int_data_from_file(path):
+        data = []
+        with open(path, 'r') as file:
+            for line in file:
+                data.append(int(line.strip()))
+
+        return data
+
+    @staticmethod
+    def get_float_data_from_file(path):
+        data = []
+        with open(path, 'r') as file:
+            for line in file:
+                data.append(float(line.strip()))
+
+        return data
