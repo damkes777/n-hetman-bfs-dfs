@@ -17,3 +17,18 @@ class PlotHelper:
         plt.show()
 
 
+    @staticmethod
+    def draw_compare_plot(a_data, b_data, title, x_label, y_label, path):
+        plt.close('all')
+
+        plt.plot(a_data, label='Normal')
+        plt.plot(b_data, label='Intelligent')
+
+        plt.title(title)
+        plt.xlabel(x_label)
+        plt.ylabel(y_label)
+        plt.grid(True)
+        plt.legend()
+        plt.savefig(path)
+        plt.show()
+
